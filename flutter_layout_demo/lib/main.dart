@@ -17,33 +17,19 @@ class MyApp extends StatelessWidget {
                 children: <Widget>[
                   new Container(
                     padding: const EdgeInsets.only(bottom: 8.0),
-                    child: new Text(
-                        'Oeschinen Lake Campground',
-                      style: new TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    child: new Text('Oeschinen Lake Campground', style: new TextStyle(fontWeight: FontWeight.bold,),),
                   ),
-                  new Text(
-                    'Kandersteg, Switzerland',
-                    style: new TextStyle(
-                      color: Colors.grey[500],
-                    ),
-                  ),
+                  new Text('Kandersteg, Switzerland', style: new TextStyle(color: Colors.grey[500],),),
                 ],
               ),
           ),
-          new Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
+          new Icon(Icons.star, color: Colors.red[500],),
           new Text('41'),
         ],
       ),
     );
-    Column buildButtonColum(IconData icon,String label){
+    Column buildButtonColunm(IconData icon,String label){
       Color color = Theme.of(context).primaryColor;
-
       return new Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -53,11 +39,7 @@ class MyApp extends StatelessWidget {
             margin: const EdgeInsets.only(top: 8.0),
             child: new Text(
               label,
-              style: new TextStyle(
-                fontSize: 12.0,
-                fontWeight: FontWeight.w400,
-                color: color,
-              ),
+              style: new TextStyle(fontSize: 12.0, fontWeight: FontWeight.w400, color: color,),
             ),
           ),
         ],
@@ -68,9 +50,9 @@ class MyApp extends StatelessWidget {
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          buildButtonColum(Icons.call, 'CALL'),
-          buildButtonColum(Icons.near_me, 'ROUTE'),
-          buildButtonColum(Icons.share, 'SHARE'),
+          buildButtonColunm(Icons.call, 'CALL'),
+          buildButtonColunm(Icons.near_me, 'ROUTE'),
+          buildButtonColunm(Icons.share, 'SHARE'),
         ],
       ),
     );
@@ -86,14 +68,6 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
     return new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or press Run > Flutter Hot Reload in IntelliJ). Notice that the
-        // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
       home: new Scaffold(
@@ -102,11 +76,7 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
         ),
           body: new ListView(
             children: <Widget>[
-              new Image.asset(
-                'images/lake.jpg',
-                height: 240.0,
-                fit: BoxFit.cover,
-              ),
+              new Image.asset('images/lake.jpg', height: 240.0, fit: BoxFit.cover,),
               titleSection,
               buttonSection,
               textSection,
